@@ -11,7 +11,6 @@ int ${signature_name}(lua_State* tolua_S)
     if (!tolua_isusertable(tolua_S,1,"${generator.scriptname_from_native($namespaced_class_name,$namespace_name)}",0,&tolua_err)) goto tolua_lerror;
 \#endif
 
-    toluafix_set_call_msg("Call from function '${signature_name}'");
     argc = lua_gettop(tolua_S)-1;
 
     #for func in $implementations   

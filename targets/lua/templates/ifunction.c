@@ -26,7 +26,6 @@ int ${signature_name}(lua_State* tolua_S)
 \#endif
 #end if
 
-    toluafix_set_call_msg("Call from function '${signature_name}'");
     argc = lua_gettop(tolua_S)-1;
 #if len($arguments) >= $min_args
     #set arg_count = len($arguments)
